@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 16px;
+        }
+
+        .translate > div {
+            background-color: palevioletred;
+        }
+
+        .scale > div {
+            background-color: plum;
+        }
+
+        .skew > div {
+            background-color: rgb(230, 134, 134);
+        }
+
+        .rotate_box > div {
+            background-color: rgb(219, 166, 184);
+        }
+
+        .translatex {
+            transform: translatex(-50%);
+            /* -음수값을 주면 왼쪽으로 */
+        }
+
+        .translatey {
+            transform: translatey(10px);
+            /* -음수값을 주면 위로 */
+        }
+
+        .translatea {
+            transform: translate(-50px,15%);
+            /* (x가로값, y세로값) */
+        }
+
+        .scalex {
+            transform: scaleX(1.5);
+        }
+
+        .scaley {
+            transform: scaleY(0.7);
+        }
+
+        .scalea {
+            transform: scale(0.3,1.2);
+        }
+
+        .skewx {
+            transform: skewX(50deg);
+        }
+
+        .skewy {
+            transform: skewY(10deg);
+        }
+
+        .skewa {
+            transform: skew(60deg,40deg);
+             /* skew는 다른애들에 비해 활용성이 높진않음 */
+        }
+
+        .rotate {
+            transform: rotate(45deg);
+            /* 회전 */
+        }
+    </style>
+</head>
+<body>
+    <article class="translate">
+        <div class="translatex"></div>
+        <div class="translatey"></div>
+        <div class="translatea"></div>
+    </article>
+
+    <article class="scale">
+        <div class="scalex"></div>
+        <div class="scaley"></div>
+        <div class="scalea"></div>
+    </article>
+
+    <article class="skew">
+        <div class="skewx"></div>
+        <div class="skewy"></div>
+        <div class="skewa"></div>
+    </article>
+
+    <article class="rotate_box">
+        <div class="rotate"></div>
+    </article>
+</body>
+</html>
