@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            animation-name: 박스;
+            /* animation-duration: 6s;
+            animation-delay: 1s;
+            /* 애니메이션 브라우저열고 대기시간 */
+            /* animation-iteration-count: infinite;
+            /* 무한반복, 숫자로 1넣으면 1번 */
+            /* animation-direction: normal; */
+            /* 역순 reverse  */
+            /* animation-fill-mode: forwards; */
+            /* 끝난 속성 그대로 유지 */
+            /* animation-play-state: running; */
+            /* animation: name이름 duration지속시간 timing-funtion타이밍함수 delay대기시간
+            iteration-tount반복횟수 direction애니메이션방향 fill-mode전후상태 play-state재생정지 */
+            animation : 박스 6s linear 1s 1 reverse forwards running;
+            /* 한번에 가능 */
+        }
+            
+
+            .box:nth-child(1):hover {
+                animation-play-state: paused;
+                /* 마우스가져다대면 멈춤 */
+            }
+
+            .box:nth-child(1) {
+                background-color: aquamarine;
+                animation-timing-function: linear;
+            }
+
+            .box:nth-child(2) {
+                background-color: rgb(235, 255, 52);
+                animation-timing-function: ease;
+            }
+
+            .box:nth-child(3) {
+                background-color: rgb(52, 255, 245);
+                animation-timing-function: ease-in;
+            }
+
+            .box:nth-child(4) {
+                background-color: rgb(52, 72, 255);
+                animation-timing-function: ease-out;
+            }
+
+            .box:nth-child(5) {
+                background-color: rgb(250, 116, 232);
+                animation-timing-function: ease-in-out;
+            }
+
+            .box:nth-child(6) {
+                background-color: rgb(250, 132, 116);
+                animation-timing-function: cubic-bezier(0.99, -0.34, 0, 1.26);
+            }
+
+        @keyframes 박스 {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">linear : 일정하게</div>
+    <div class="box">ease : 느리게-빠르게</div>
+    <div class="box">ease-in : 빠르게-느리게</div>
+    <div class="box">ease-out : 느리게-빠르게</div>
+    <div class="box">ease-in-out : 느리게-빠르게-느리게</div>
+    <div class="box">자신만의 값을 정의</div>
+</body>
+</html>
