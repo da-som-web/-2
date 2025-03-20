@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야매슬라이드</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            display: block;
+            margin: 50px auto;
+            padding: 16px 24px;
+            font-size: 24px;
+            background-color: slateblue;
+            border: 0;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 5px 10px 10px #999;
+        }
+
+        ul {
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            margin: 0 auto;
+            /* 가운데정렬 display center / margin 0 auto */
+
+        }
+
+        li {
+            min-width: 268px;
+            height: 150px;
+            list-style: none;
+            margin: 0 16px;
+        }
+        
+        button:focus + ul li {
+            animation: slide 5s forwards;
+            animation-timing-function: cubic-bezier(1, 0.1, 0.43, 1.01);
+        }
+
+        li:nth-child(1) {
+            background: url(./고양이1.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(2) {
+            background: url(./고양이2.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(3) {
+            background: url(./고양이3.jpeg);
+            background-size: cover;
+        }
+
+        li:nth-child(4) {
+            background: url(./고양이4.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(5) {
+            background: url(./고양이5.png);
+            background-size: cover;
+        }
+
+        li:nth-child(6) {
+            background: url(./고양이6.jpg);
+            background-size: cover;
+        }
+
+        li:nth-child(7) {
+            background: url(./고양이7.jpeg);
+            background-size: cover;
+        }
+
+        li:nth-child(8) {
+            background: url(./고양이8.jpg);
+            background-size: cover;
+        }
+
+        @keyframes slide {
+            20% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translate(-1200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button>
+            고양이가 지나가요
+        </button>
+
+        <ul>
+            <li>
+                <!-- <img src="./고양이1.jpg" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이2.jpg" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이3.jpeg" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이4.jpg" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이5.png" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이6.jpg" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이7.jpeg" alt=""> -->
+            </li>
+            <li>
+                <!-- <img src="./고양이8.jpg" alt=""> -->
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
