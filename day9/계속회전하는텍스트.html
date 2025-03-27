@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>계속회전하는텍스트</title>
+    <style>
+        @font-face {
+            font-family: 'SinchonRhapsody';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/SinchonRhapsody.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        section {
+            font-family: 'SinchonRhapsody';
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .animation_text {
+            width: max-content;
+            padding: 24px;
+            font-size: 124px;
+        }
+
+        .roll1 {
+            animation: roll1 30s infinite linear;
+        }
+
+        @keyframes roll1 {
+            0% {
+                transform: translatex(0);
+            }
+
+            100% {
+                transform: translatex(-50%);
+            }
+        }
+
+        .roll2 {
+            animation: roll2 30s infinite linear;
+        }
+
+        @keyframes roll2 {
+            0% {
+                transform: translatex(-50%);
+            }
+
+            100% {
+                transform: translatex(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="animation_text roll1">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus veniam optio dolores quae sit, doloribus
+                magnam explicabo saepe natus, asperiores voluptate vero ullam, non blanditiis cupiditate rerum placeat
+                reprehenderit cum?
+            </p>
+        </div>
+        <div class="animation_text roll2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus veniam optio dolores quae sit, doloribus
+                magnam explicabo saepe natus, asperiores voluptate vero ullam, non blanditiis cupiditate rerum placeat
+                reprehenderit cum?
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
